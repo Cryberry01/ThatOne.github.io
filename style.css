@@ -1,0 +1,50 @@
+*::after,*::before,*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(218, 223, 211);
+    overflow: hidden;
+    
+}
+.main_cont{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.Grid_zone{
+    display: grid;
+    width: 240px;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 50px);  
+}
+.Grid_zone div, #math_op div{
+    transition: background-color 0.2s ease, opacity 0.1s ease;
+}
+.el0{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.numbers, #math_op{
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+.Grid_zone div:hover, #math_op:hover{
+    background-color: gray;
+}
+.Grid_zone div:active, #math_op:active{
+    opacity: 60%;
+}
+.work_space{   
+    grid-column-start: 1;
+    grid-column-end: 5; 
+}
+.work_space input{
+    height: 100%;
+    width: 100%;
+}
